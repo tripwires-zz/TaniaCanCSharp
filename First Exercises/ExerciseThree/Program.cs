@@ -13,9 +13,8 @@ namespace ExerciseThree
             //+ contains to check if the nr is already used or not
             // -after 5 nrs are entered => sort and display them => sort, cw
 
-            var totalNrsEntered = 0;
-            var listOfNrs = new List<int>();
-            var sortedListOfNrs = new List<int>(listOfNrs.Count);
+            int totalNrsEntered = 0;
+            List<int> listOfNrs = new List<int>();
 
             while (totalNrsEntered < 5)
             {
@@ -30,13 +29,18 @@ namespace ExerciseThree
                     totalNrsEntered++;
                 }
                 else
+                {
                     Console.WriteLine("Enter another nr. Your list already contains this nr");
-             }
+                }
+            }
             Console.WriteLine();
 
             listOfNrs.Sort();
             foreach (int nr in listOfNrs)
+            {
                 Console.Write(nr + ", ");
+            }
+            Console.ReadLine();
         }
     }
 }
